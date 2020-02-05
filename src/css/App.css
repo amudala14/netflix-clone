@@ -7,6 +7,8 @@
     --main-deep-dark: rgba(0,0,0);
     --main-grey: rgba(153,153,153);
     --color-white: #fff;
+    --color-text: #f3f3f3;
+    --color-error: #E87C03;
 }
 
 *,
@@ -25,11 +27,10 @@ html {
 }
 
 body {
-    font-family: 'Helvetica', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: var(--main-dark);
-    color: var(--color-white);
-    letter-spacing: 1px;
+    color: var(--color-text);
 }
 
 a {
@@ -58,7 +59,7 @@ a {
 }
 
 .tertiary-title {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-weight: 500;
     display: block;
 }
@@ -67,6 +68,20 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+}
+
+.form__input::-webkit-input-placeholder{color:#8c8c8c;font-size: 1.6rem;}
+
+.subscrib__label {
+    position: absolute;
+    top: 35%;
+    left: 10px;
+    color: #8c8c8c;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all .2s;
+    pointer-events: none;
 }
 
 .form__subscribe {
@@ -76,6 +91,8 @@ a {
 .subscriber__input {
     height: 6rem;
     width: 70%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
 .subscriber__btn {
@@ -89,8 +106,36 @@ a {
 
 .form__input {
     border: 1px solid #eee;
-    padding: 10px 10px 0;
-    /* min-width: 450px; */
+    padding: 7px 10px;
+    font-size: 1.6rem;
+    font-family: inherit;
+    border: solid 1px #8c8c8c;
+    color: #000000;
+}
+
+.form__input:focus:invalid {
+    border: 1px solid var(--color-error)
+}
+
+.form__subscribe .form__input:focus,
+.form__subscribe .form__input:valid{
+    outline: none;
+    padding-top: 15px;
+}
+
+.form__subscribe .form__input:focus + label.subscrib__label {
+    top: 15%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #777;
+}
+
+.form__subscribe .form__input:focus + label.subscrib__label,
+.form__subscribe .form__input:valid + label.subscrib__label {
+    top: 10%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #8c8c8c;
 }
 
 .form__btn,
