@@ -21,7 +21,7 @@ const Header = () => {
                 <form action="" className="form__subscribe">
                     <div className="subscrib-container">
                         <input type="email" id="email" autoComplete="off" required className="form__input subscriber__input"/>
-                        <label for="email" class="subscrib__label">Email Address</label>
+                        <label className="subscrib__label">Email Address</label>
                         <button className="form__btn subscriber__btn">
                             <span>Try it now</span>
                             <Icon icon={arrows_right} size={40} />

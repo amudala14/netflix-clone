@@ -9,6 +9,7 @@
     --color-white: #fff;
     --color-text: #f3f3f3;
     --color-error: #E87C03;
+    --btn-color: #e50914;
 }
 
 *,
@@ -17,6 +18,14 @@
     padding: 0;
     margin: 0;
     box-sizing: inherit;
+}
+
+li:focus {
+    outline: none;
+}
+
+svg path{
+    outline: none;
 }
 
 html {
@@ -28,6 +37,7 @@ html {
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
     -webkit-font-smoothing: antialiased;
     background-color: var(--main-dark);
     color: var(--color-text);
@@ -41,9 +51,9 @@ a {
     margin: 2rem
 }
 
-.d-flex {display: flex;}
-.j-center {justify-content: center;}
-.align-center{align-items: center;}
+.d-flex { display: flex; }
+.j-center { justify-content: center; }
+.align-center{ align-items: center; }
 
 .main-title {
     font-size: 5rem;
@@ -71,7 +81,7 @@ a {
     position: relative;
 }
 
-.form__input::-webkit-input-placeholder{color:#8c8c8c;font-size: 1.6rem;}
+.form__input::-webkit-input-placeholder{ color:#8c8c8c;font-size: 1.6rem; }
 
 .subscrib__label {
     position: absolute;
@@ -114,11 +124,11 @@ a {
 }
 
 .form__input:focus:invalid {
-    border: 1px solid var(--color-error)
+    border: 2px solid var(--color-error);
 }
 
 .form__subscribe .form__input:focus,
-.form__subscribe .form__input:valid{
+.form__subscribe .form__input:valid {
     outline: none;
     padding-top: 15px;
 }
@@ -140,11 +150,14 @@ a {
 
 .form__btn,
 .form__btn:active {
-    border: 1px solid #e50914;
+    border: 1px solid var(--btn-color);
     outline: none;
-    background-color: #e50914;
+    background-color: var(--btn-color);
     text-transform:uppercase;
     font-weight: 500;
-    color: #fff;
-    font-size: 2.3rem;
+    color: var(--color-text);
+    font-size: 2.1rem;
 }
+
+
+
