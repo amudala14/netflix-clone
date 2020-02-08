@@ -18,10 +18,6 @@ ul.tab-nav-container li {
     cursor: pointer;
 }
 
-ul.tab-nav-container li:first-child {
-    /* padding-top: 1rem; */
-}
-
 ul.tab-nav-container li.active {
     border-bottom: .4rem solid var(--main-red);
 }

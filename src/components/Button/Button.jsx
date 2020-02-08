@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Buttom = styled.div`
+export const Button = styled.div`
     display: inline-block
     border: 1px solid var(--btn-color);
     outline: none;
@@ -10,6 +10,7 @@ export const Buttom = styled.div`
     color: var(--color-text);
     font-size: 1.4rem;
     padding: 1rem 1.5rem;
+    text-align: center;
     text-transform: uppercase;
     border-radius: 3px;
     cursor: pointer;

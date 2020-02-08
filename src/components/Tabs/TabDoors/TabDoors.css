@@ -30,4 +30,5 @@
 
 .cancelImage {
     width: 35.5rem;
+    justify-self: center;
 }
